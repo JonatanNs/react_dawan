@@ -3,25 +3,28 @@ import './App.css'
 import JsxTheorie from "./components/JsxTheorie";
 import HookUseState from './components/HookUseState';
 import Form from './components/Form';
+import { Flux } from './components/Flux';
 import DisplayList from './components/DisplayList';
-import ExerciceFruit from './components/ExerciceFruits/ExerciceFruit';
+ import ExerciceFruit from "./components/ExerciceFruits/ExerciceFruit";
+import { Navbar } from './components/NavBar';
 
-function App(){
+
+function App() {
   return (
     <>
-      <p>NavBar</p>
       <BrowserRouter>
+        <Navbar />
         <Routes>
-          <Route path="/" element={ <JsxTheorie /> } />
-          <Route path="/use-state" element={ <HookUseState /> } />
-          <Route path="/formulaire" element={ <Form /> } />
-          <Route path="/liste" element={ <DisplayList /> } />
-          <Route path="/exercice-fruit" element={ <ExerciceFruit /> } />
-          <Route path="/flux-de-donnees" element={ <Flux /> } />
+          <Route path="" element={<JsxTheorie />} />
+          <Route path="/use-state" element={<HookUseState />} />
+          <Route path="/formulaire" element={<Form />} />
+          <Route path="/liste" element={<DisplayList />} />
+          <Route path="/exercice-fruits" element={<ExerciceFruit />} />
+          <Route path="/flux-de-donnees" element={<Flux />} />
         </Routes>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App;

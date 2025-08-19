@@ -1,15 +1,16 @@
-export const NavBar = () => {
+import { Link } from "react-router-dom";
+
+export const Navbar = () => {
   return (
-    <>
-        <section>
-            <nav>
-                <a href="">Accueil</a>
-                <a href="/use-state">Hook use-state</a>
-                <a href="/formulaire">Formulaire</a>
-                <a href="/liste">Les listes</a>
-                <a href="/exercice-fruits">Exercice fruits</a>
-            </nav>
-        </section>
-    </>
+    <section>
+      <nav>
+        <Link to="">Accueil </Link>
+        <Link to="/use-state">Hook use-state </Link>
+        <Link to="/formulaire">Formulaire </Link>
+        <Link to="/liste">Les listes </Link>
+        <Link to="/exercice-fruits">Exercice-fruits </Link>
+        <Link to="/flux-de-donnees">flux </Link>
+      </nav>
+    </section>
   );
-}
+};
