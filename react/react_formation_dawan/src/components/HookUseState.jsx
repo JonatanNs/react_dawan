@@ -26,7 +26,6 @@ function HookUseState(){
             <button onClick={increment}>+</button>
             <button onClick={decrement}>-</button>
             <button onClick={reset}>Reset</button>
-
         </>
     )
 }
