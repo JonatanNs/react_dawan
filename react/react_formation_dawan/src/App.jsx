@@ -7,6 +7,9 @@ import { Flux } from './components/Flux';
 import DisplayList from './components/DisplayList';
  import ExerciceFruit from "./components/ExerciceFruits/ExerciceFruit";
 import { Navbar } from './components/NavBar';
+import { RequeteApi } from './components/RequeteApi';
+import { FormProduct } from './components/FormProduct';
+import { HookUseEffect } from './components/HookUseEffect';
 
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
           <Route path="/liste" element={<DisplayList />} />
           <Route path="/exercice-fruits" element={<ExerciceFruit />} />
           <Route path="/flux-de-donnees" element={<Flux />} />
+          <Route path="/use-effect" element={<HookUseEffect />} />
+          <Route path="/requete-api" element={<RequeteApi />} />
         </Routes>
       </BrowserRouter>
     </>

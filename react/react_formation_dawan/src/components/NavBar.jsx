@@ -10,6 +10,8 @@ export const Navbar = () => {
         <Link to="/liste">Les listes </Link>
         <Link to="/exercice-fruits">Exercice-fruits </Link>
         <Link to="/flux-de-donnees">flux </Link>
+        <Link to="/use-effect">use-effect </Link>
+        <Link to="/requete-api">Requete </Link>
       </nav>
     </section>
   );
