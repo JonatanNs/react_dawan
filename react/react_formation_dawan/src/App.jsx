@@ -4,7 +4,7 @@ import JsxTheorie from "./components/JsxTheorie";
 import HookUseState from './components/HookUseState';
 import Form from './components/Form';
 import DisplayList from './components/DisplayList';
-import ExerciceFruit from './components/ExerciceFruit';
+import ExerciceFruit from './components/ExerciceFruits/ExerciceFruit';
 
 function App(){
   return (
@@ -13,11 +13,11 @@ function App(){
       <BrowserRouter>
         <Routes>
           <Route path="/" element={ <JsxTheorie /> } />
-          <Route path="/useState" element={ <HookUseState /> } />
-          <Route path="/form" element={ <Form /> } />
-          <Route path="/list" element={ <DisplayList /> } />
-          <Route path="/exerciceFruit" element={ <ExerciceFruit /> } />
-          <Route path="/test" element={ <> <p>Page test !</p> </> } />
+          <Route path="/use-state" element={ <HookUseState /> } />
+          <Route path="/formulaire" element={ <Form /> } />
+          <Route path="/liste" element={ <DisplayList /> } />
+          <Route path="/exercice-fruit" element={ <ExerciceFruit /> } />
+          <Route path="/flux-de-donnees" element={ <Flux /> } />
         </Routes>
       </BrowserRouter>
     </>
