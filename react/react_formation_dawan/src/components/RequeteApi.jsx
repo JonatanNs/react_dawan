@@ -4,33 +4,42 @@ import { useEffect, useState } from "react";
 import { FormProduct } from "./FormProduct";
 
 export const RequeteApi = () => {
-    
-    const endpoints = "http://localhost:3001/products";
+  const endpoint = "http://localhost:3001/products";
 
-    const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
-    useEffect(() =>{
-        loadProducts();
-    }, []);
+  useEffect(() => {
+    loadProducts();
+    // loadProductsAsync();
+  }, []);
 
-    const loadProducts = () => {
-        axios
-        .get(endpoints)
-        .then((response) => {
-            console.log(response.data);
-            setProducts(response.data);
-        })
-        .catch((e) => console.log(e))
-        .finally(() => console.log("requete terminé"));
-    };
+  const loadProducts = () => {
+    axios
+      .get(endpoint)
+      .then((response) => {
+        console.log(response.data);
+        setProducts(response.data);
+      })
+      .catch((e) => console.log(e))
+      .finally(() => console.log("requete terminé"));
+  };
+
+  const loadProductsAsync = async () => {
+    try {
+      const response = await axios.get(endpoint);
+      setProducts(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <>
       <h1>Requete API</h1>
-      <a href={endpoints}>endpoints: {endpoints}</a>
+      <a href={endpoint}>endpoint: {endpoint}</a>
 
-      <TableProduct products={products}/>
-      <FormProduct setProducts={setProducts}/>
+      <TableProduct products={products} />
+      <FormProduct setProducts={setProducts} />
     </>
   );
-}
+};
